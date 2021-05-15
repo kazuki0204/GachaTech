@@ -10,7 +10,7 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
-    let gachaSoundPlayer = try! AVAudioPlayer(data: NSDataAsset(name: "don")!.data)
+    let gachaSoundPlayer = try! AVAudioPlayer(data: NSDataAsset(name: "kaka")!.data)
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -22,28 +22,37 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let number = Int.random(in: 0..<9)
+        let number = Int.random(in: 0..<19)
         
         monsterArray = [UIImage(named:"monster001.png")!,
+                        UIImage(named:"monster001.png")!,
+                        UIImage(named:"monster001.png")!,
+                        UIImage(named:"monster001.png")!,
+                        UIImage(named:"monster002.png")!,
+                        UIImage(named:"monster002.png")!,
                         UIImage(named:"monster002.png")!,
                         UIImage(named:"monster003.png")!,
+                        UIImage(named:"monster003.png")!,
+                        UIImage(named:"monster004.png")!,
                         UIImage(named:"monster004.png")!,
                         UIImage(named:"monster005.png")!,
+                        UIImage(named:"monster005.png")!,
+                        UIImage(named:"monster006.png")!,
                         UIImage(named:"monster006.png")!,
                         UIImage(named:"monster007.png")!,
                         UIImage(named:"monster008.png")!,
                         UIImage(named:"monster009.png")!,
                         UIImage(named:"monster010.png")!,]
             
-        let monsterNameArray: [String] = ["Neko", "Sakana", "Mushi", "Yousei", "Kishi", "Ryuu", "Mahou", "Kindra", "Roki", "Saikyo"]
+        let monsterNameArray: [String] = ["Neko", "Neko", "Neko", "Neko", "Sakana", "Sakana", "Sakana", "Mushi", "Mushi", "Yousei", "Yousei", "Kishi", "Kishi", "Ryuu", "Ryuu", "Mahou", "Kindra", "Roki", "Saikyo"]
             
         monsterImageView.image = monsterArray[number]
         monsterName.text = monsterNameArray[number]
             
 
-        if number == 9{
+        if number == 18{
             haikeiImageView.image = UIImage(named: "bg_gold.png")
-        } else if number > 5{
+        } else if number > 12{
             haikeiImageView.image = UIImage(named: "bg_red.png")
         } else{
             haikeiImageView.image = UIImage(named: "bg_blue.png")
@@ -61,11 +70,6 @@ class ResultViewController: UIViewController {
         
         animation.toValue = NSNumber(value: 2 * Double.pi)
         
-        animation.valueFunction = CAValueFunction(name: CAValueFunctionName.rotateZ)
-        
-        animation.duration = 2
-        
-        animation.repeatCount = 0.5
         
         haikeiImageView.layer.add(animation, forKey: nil)
         
